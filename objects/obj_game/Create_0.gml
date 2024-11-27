@@ -1,10 +1,10 @@
 rollback_define_player(obj_player);
 
 rollback_define_input({
-	left: vk_left,
-	right: vk_right,
-	up: vk_up ,
-	down: vk_down ,
+	left: ord("A"),
+	right: ord("D"),
+	up: ord("W") ,
+	down: ord("S") ,
 	mb_x: m_axisx ,
 	mb_y: m_axisy,
 	fire: mb_left
