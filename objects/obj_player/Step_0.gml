@@ -45,6 +45,27 @@ y = clamp(y, 0, room_height);
 
 image_angle = point_direction(x, y, _input.mb_x, _input.mb_y)
 
+
+// Verifica se o escudo está ativo
+if (shield_active)
+{
+    // Diminui o tempo de duração do escudo
+    shield_time -= 1;
+
+    // Se o tempo do escudo acabar, desativa o escudo
+    if (shield_time <= 0)
+    {
+        shield_active = false;
+		
+		//destrutir visualmente o escudo
+		with (obj_shield) {
+            if (owner == self) {
+                instance_destroy();
+            }
+        }
+    }
+}
+
 /* if (_input.fire_pressed)
 {
 	var _proj = instance_create_layer (x, y, layer, obj_projectile);
@@ -54,3 +75,5 @@ image_angle = point_direction(x, y, _input.mb_x, _input.mb_y)
 	_proj.player = self;
 }
 *\
+
+

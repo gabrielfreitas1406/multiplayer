@@ -14,3 +14,7 @@ if(!rollback_join_game())
 {
 rollback_create_game(2,false);
 }
+
+// Variável de controle para ativar o jogo
+game_active = false;
+shield_timer = 0; // Timer para controle de spawn de escudo

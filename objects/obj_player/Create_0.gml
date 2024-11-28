@@ -25,3 +25,8 @@ sword = instance_create_layer(x, y, "Instances", obj_sword);
 
 // Faz a espada "seguir" o jogador (opcional)
 sword.owner = id;
+
+
+// Variáveis para controlar o escudo
+shield_active = false;  // Define se o escudo está ativo
+shield_time = 0;        // Tempo de duração do escudo
