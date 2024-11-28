@@ -4,6 +4,9 @@
 if (shield_active) {
     // O escudo bloqueia a bola
     shield_active = false; // Desativa o escudo após o uso
+	
+	// Atualiza a bola para considerar este jogador como o último atacante
+    other.last_attacker = self.player_id;
 
     // Opcional: adicione um efeito visual indicando o impacto
     effect_create_above(ef_explosion, self.x, self.y, 0, c_blue);
