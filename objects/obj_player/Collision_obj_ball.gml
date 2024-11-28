@@ -22,6 +22,7 @@ if (shield_active) {
         // Cria um efeito de anel acima do jogador atingido
         effect_create_above(ef_ring, self.x, self.y, 0, c_white);
 
+
         // Restaura o jogador a uma posição aleatória
         self.x = irandom_range(40, room_width - 40);
         self.y = irandom_range(40, room_height - 40);
