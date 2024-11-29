@@ -9,13 +9,13 @@ if (shield_active) {
     other.last_attacker = self.player_id;
 	
 	//atualiza a cor da bola
+	var _ball = obj_ball;
 	if (owner.player_id == 1){
 		_ball.image_blend = c_red;
 	}
 	else{
 		_ball.image_blend = c_blue;
 	}
-				
 
     // Opcional: adicione um efeito visual indicando o impacto
     effect_create_above(ef_explosion, self.x, self.y, 0, c_blue);
