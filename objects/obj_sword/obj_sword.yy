@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sword",
-    "path":"sprites/spr_sword/spr_sword.yy",
+    "name":"spr_sword2",
+    "path":"sprites/spr_sword2/spr_sword2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
