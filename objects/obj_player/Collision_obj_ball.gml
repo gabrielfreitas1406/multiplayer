@@ -7,6 +7,15 @@ if (shield_active) {
 	
 	// Atualiza a bola para considerar este jogador como o último atacante
     other.last_attacker = self.player_id;
+	
+	//atualiza a cor da bola
+	if (owner.player_id == 1){
+		_ball.image_blend = c_red;
+	}
+	else{
+		_ball.image_blend = c_blue;
+	}
+				
 
     // Opcional: adicione um efeito visual indicando o impacto
     effect_create_above(ef_explosion, self.x, self.y, 0, c_blue);
@@ -40,6 +49,10 @@ if (shield_active) {
         other.direction = 0;  // Reseta a direção da bola
         other.x = self.x + irandom_range(-50, 50); // Posiciona a bola próxima ao jogador derrotado
         other.y = self.y + irandom_range(-50, 50); // Posiciona a bola próxima ao jogador derrotado
+
+		//atualiza a cor da bola
+		var _ball = obj_ball;
+		_ball.image_blend = -1;
 
         // Resetar o atacante da bola
         other.last_attacker = -1;  // Resetando quem atacou a bola (nenhum atacante)

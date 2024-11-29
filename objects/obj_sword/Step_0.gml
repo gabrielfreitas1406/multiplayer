@@ -42,6 +42,13 @@ if (instance_exists(owner))
 				// Atualiza a variável 'last_attacker' para o player_id ou a espada
                 _ball.last_attacker = owner.player_id;  // Salva o ID do jogador dono da espada
 				
+				if (owner.player_id == 1){
+					_ball.image_blend = c_red;
+				}
+				else{
+					_ball.image_blend = c_blue;
+				}
+				
                 // Arremessando a bola no sentido oposto
                 _ball.direction = image_angle;  // Direção oposta à da espada
                 _ball.speed += 3;  // Define a velocidade da bola
