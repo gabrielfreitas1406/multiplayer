@@ -10,7 +10,7 @@ if (shield_active) {
 	
 	//atualiza a cor da bola
 	var _ball = obj_ball;
-	if (owner.player_id == 1){
+	if (player_id == 1){
 		_ball.image_blend = c_red;
 	}
 	else{
