@@ -10,11 +10,14 @@ vsp = 0;
 
 if (player_id == 0)
 {
+	sprite_index = spr_player1
     x = 50;
 }
 else if (player_id == 1)
 {
+	sprite_index = spr_player2
     x = room_width - 50;
+	
 }
 
 // Inicializa os pontos do jogador
